@@ -1,0 +1,32 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": "auto",
+        "corejs": 3,
+        "useBuiltIns": "entry",
+        "targets": { "browsers": ["last 2 version", "> 1%", "IE 11"] }
+      }
+    ],
+    "@babel/preset-typescript",
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-transform-arrow-functions",
+    "@babel/plugin-proposal-object-rest-spread",
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    "react-hot-loader/babel",
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "@": "./src/",
+          "@/*": "./src/*"
+        }
+      }
+    ]
+  ]
+}

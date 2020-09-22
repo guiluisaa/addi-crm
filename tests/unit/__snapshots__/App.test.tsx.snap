@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should match snapchat 1`] = `
+<Provider
+  store={
+    Object {
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+      Symbol(observable): [Function],
+    }
+  }
+>
+  <Component
+    theme={
+      Object {
+        "color": Object {
+          "black": "#424242",
+          "white": "#FFF",
+        },
+      }
+    }
+  >
+    <Routes />
+  </Component>
+</Provider>
+`;
