@@ -1,5 +1,7 @@
 export type PersonDto = {
-  idNumber: string;
+  id: string;
+
+  nationalIdNumber: string;
   firstName: string;
   lastName: string;
   birthdate: string;
