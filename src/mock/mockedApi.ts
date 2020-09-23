@@ -1,4 +1,5 @@
 import { Model, Server } from 'miragejs';
+import { records } from './records.mock';
 import { registries } from './registries.mock';
 
 const mockedApi = () => {
@@ -7,10 +8,12 @@ const mockedApi = () => {
 
     models: {
       registry: Model,
+      record: Model,
     },
 
     seeds(server: any) {
       registries.forEach((registry) => server.create('registry', registry));
+      records.forEach((record) => server.create('record', record));
     },
 
     routes() {
@@ -18,6 +21,10 @@ const mockedApi = () => {
 
       this.get('/registries', (schema: any) => {
         return schema.registries.all();
+      });
+
+      this.get('/records', (schema: any) => {
+        return schema.records.all();
       });
     },
   });
