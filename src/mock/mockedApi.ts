@@ -20,13 +20,14 @@ const mockedApi = () => {
     routes() {
       this.timing = 1000;
 
-      this.get('/registries', (schema: any) => {
-        return schema.registries.all();
-      });
+      this.get('/registries', (schema: any) => schema.registries.all());
 
-      this.get('/records', (schema: any) => {
-        return schema.records.all();
-      });
+      this.get('/records', (schema: any) => schema.records.all());
+
+      this.get('/score/:nationalIdNumber', (_, request: any) => ({
+        nationalIdNumber: request.params.nationalIdNumber,
+        score: Math.floor(Math.random() * 101),
+      }));
     },
   });
 
