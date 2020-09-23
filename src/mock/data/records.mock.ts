@@ -1,4 +1,4 @@
-import { RecordDto } from '@/dto/Record.dto';
+import { RecordDto } from '@/models/Record.model';
 
 export const records: RecordDto[] = [
   {
