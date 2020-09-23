@@ -1,6 +1,7 @@
 import { Model, Server } from 'miragejs';
-import { records } from './records.mock';
-import { registries } from './registries.mock';
+
+import { records } from './data/records.mock';
+import { registries } from './data/registries.mock';
 
 const mockedApi = () => {
   const api = new Server({
