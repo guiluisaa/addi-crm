@@ -6,6 +6,8 @@ declare module 'styled-components' {
       white: string;
       black: string;
 
+      background: string;
+
       primary: string;
       secondary: string;
 
@@ -38,6 +40,7 @@ declare module 'styled-components' {
       sm: number;
       md: number;
       lg: number;
+      xl: number;
     };
   }
 }
