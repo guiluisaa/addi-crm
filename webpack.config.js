@@ -4,6 +4,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const dotenv = require('dotenv');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = (env) => {
   const environment = env.ENVIRONMENT;
@@ -77,6 +78,9 @@ module.exports = (env) => {
       new HtmlWebpackPlugin({
         template: path.join(__dirname, './public', 'index.html'),
         favicon: path.join(__dirname, './public', 'favicon.ico'),
+      }),
+      new CopyPlugin({
+        patterns: [{ from: './public/reset.css', to: './reset.css' }],
       }),
     ],
   };
