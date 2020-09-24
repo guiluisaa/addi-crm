@@ -5,6 +5,8 @@ const theme: DefaultTheme = {
     white: '#FFF',
     black: '#424242',
 
+    background: '#ebebeb',
+
     primary: '#6272a4',
     secondary: '#44475a',
 
@@ -37,6 +39,7 @@ const theme: DefaultTheme = {
     sm: 576,
     md: 768,
     lg: 992,
+    xl: 1200,
   },
 };
 
