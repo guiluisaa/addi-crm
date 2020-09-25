@@ -12,15 +12,15 @@ const Redirect404View = toLoadable(
 );
 
 const Routes: FC = () => (
-  <Layout>
-    <Router>
+  <Router>
+    <Layout>
       <Switch>
         <Route exact path="/" component={IndexView} />
 
         <Route component={Redirect404View} />
       </Switch>
-    </Router>
-  </Layout>
+    </Layout>
+  </Router>
 );
 
 export default Routes;
