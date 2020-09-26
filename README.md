@@ -1,6 +1,6 @@
 # addi-lead
 
-CRM Front-end to convert leads into clients
+The ADDI CRM front-end to convert leads into prospects
 
 ## Prerequisites
 
