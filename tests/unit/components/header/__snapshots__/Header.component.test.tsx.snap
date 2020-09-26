@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should match snapchat 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      <Styled(Link)
+        to="/"
+      >
+        <AddiLogo />
+      </Styled(Link)>
+      <Styled(FontAwesomeIcon) />
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
