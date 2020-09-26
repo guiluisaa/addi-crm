@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Paragraph /> should match snapchat 1`] = `
+.c0 {
+  font-family: primary:'Open Sans',sans-serif;
+  color: #424242;
+  font-size: 14px;
+  line-height: 19px;
+}
+
+<p
+  className="c0"
+>
+  Some Text
+</p>
+`;
+
+exports[`<Title /> should match snapchat 1`] = `
+.c0 {
+  font-family: primary:'Open Sans',sans-serif;
+  color: #424242;
+  font-size: 32px;
+  line-height: 42px;
+}
+
+<h2
+  className="c0"
+>
+  Some Title
+</h2>
+`;

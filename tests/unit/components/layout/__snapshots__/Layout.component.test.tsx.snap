@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Layout /> should match snapchat 1`] = `
+<styled.div>
+  <Header />
+  <styled.div />
+</styled.div>
+`;
