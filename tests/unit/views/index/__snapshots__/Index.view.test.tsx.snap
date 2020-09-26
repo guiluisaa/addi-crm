@@ -2,6 +2,13 @@
 
 exports[`<IndexView /> should match snapchat 1`] = `
 <Fragment>
-  Index View
+  <styled.h2>
+    Leads
+  </styled.h2>
+  <styled.p
+    color="secondary"
+  >
+    John Doe
+  </styled.p>
 </Fragment>
 `;

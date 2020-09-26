@@ -12,17 +12,63 @@ exports[`<App /> should match snapchat 1`] = `
     }
   }
 >
-  <Component
-    theme={
+  <PersistGate
+    loading={null}
+    persistor={
       Object {
-        "color": Object {
-          "black": "#424242",
-          "white": "#FFF",
-        },
+        "dispatch": [Function],
+        "flush": [Function],
+        "getState": [Function],
+        "pause": [Function],
+        "persist": [Function],
+        "purge": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+        Symbol(observable): [Function],
       }
     }
   >
-    <Routes />
-  </Component>
+    <Component
+      theme={
+        Object {
+          "borderRadius": Object {
+            "default": "3px",
+          },
+          "breakpoint": Object {
+            "lg": 992,
+            "md": 768,
+            "sm": 576,
+            "xl": 1200,
+          },
+          "color": Object {
+            "background": "#ebebeb",
+            "black": "#424242",
+            "border": "#BFBFBF",
+            "danger": "#FF5B68",
+            "primary": "#6272a4",
+            "secondary": "#44475a",
+            "success": "#2AD178",
+            "warning": "#FABD59",
+            "white": "#FFF",
+          },
+          "font": Object {
+            "color": Object {
+              "primary": "#424242",
+              "secondary": "#969696",
+            },
+            "family": Object {
+              "primary": "'Open Sans', sans-serif",
+            },
+            "weight": Object {
+              "regular": 400,
+              "semiBold": 600,
+            },
+          },
+        }
+      }
+    >
+      <Routes />
+    </Component>
+  </PersistGate>
 </Provider>
 `;
