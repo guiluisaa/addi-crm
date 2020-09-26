@@ -21,7 +21,7 @@ describe('<Title />', () => {
     expect(wrapper).toHaveStyleRule('color', '#424242');
   });
 
-  it('should have the secondary color on props', () => {
+  it('should have the secondary color when is set', () => {
     const wrapper = shallow(<Title theme={theme} color="secondary" />);
     expect(wrapper).toHaveStyleRule('color', '#969696');
   });
@@ -38,7 +38,7 @@ describe('<Paragraph />', () => {
     expect(wrapper).toHaveStyleRule('color', '#424242');
   });
 
-  it('should have the secondary color on props', () => {
+  it('should have the secondary when is set', () => {
     const wrapper = shallow(<Paragraph theme={theme} color="secondary" />);
     expect(wrapper).toHaveStyleRule('color', '#969696');
   });
