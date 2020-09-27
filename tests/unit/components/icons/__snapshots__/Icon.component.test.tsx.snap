@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Icon /> should match snapchat 1`] = `
+.c0 {
+  font-size: 30px;
+  color: rgba(0,0,0,0.24);
+}
+
+<FontAwesomeIcon
+  border={false}
+  className="c0"
+  fixedWidth={false}
+  flip={null}
+  icon="id-card"
+  inverse={false}
+  listItem={false}
+  mask={null}
+  pull={null}
+  pulse={false}
+  rotation={null}
+  size={null}
+  spin={false}
+  swapOpacity={false}
+  symbol={false}
+  theme={
+    Object {
+      "borderRadius": Object {
+        "default": "3px",
+      },
+      "breakpoint": Object {
+        "lg": 992,
+        "md": 768,
+        "sm": 576,
+        "xl": 1200,
+      },
+      "color": Object {
+        "background": "#ebebeb",
+        "black": "#424242",
+        "border": "#BFBFBF",
+        "danger": "#FF5B68",
+        "primary": "#6272a4",
+        "secondary": "#44475a",
+        "success": "#2AD178",
+        "warning": "#FABD59",
+        "white": "#FFF",
+      },
+      "font": Object {
+        "color": Object {
+          "primary": "#424242",
+          "secondary": "#969696",
+        },
+        "family": Object {
+          "primary": "'Open Sans', sans-serif",
+        },
+        "weight": Object {
+          "regular": 400,
+          "semiBold": 600,
+        },
+      },
+    }
+  }
+  title=""
+  transform={null}
+/>
+`;
+
+exports[`<Paragraph /> should match snapchat 1`] = `
+.c0 {
+  display: inline-block;
+  position: relative;
+}
+
+<div
+  className="c0"
+/>
+`;
