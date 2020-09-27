@@ -4,7 +4,7 @@ type BaseTypographCSSProps = {
   color?: 'primary' | 'secondary';
 };
 
-const BaseTypographCSS = css<BaseTypographCSSProps>`
+export const BaseTypographCSS = css<BaseTypographCSSProps>`
   font-family: ${({ theme }) => theme.font.family};
   color: ${({ theme, color }) =>
     color ? theme.font.color[color] : theme.font.color.primary};
