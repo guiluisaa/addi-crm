@@ -1,8 +1,9 @@
 import { Model, Server } from 'miragejs';
-import { leads } from './data/leads.mock';
 
-import { records } from './data/records.mock';
 import { registries } from './data/registries.mock';
+import { records } from './data/records.mock';
+import { leads } from './data/leads.mock';
+import { prospectors } from './data/prospectors.mock';
 
 const mockedApi = () => {
   const api = new Server({
@@ -12,12 +13,16 @@ const mockedApi = () => {
       registry: Model,
       record: Model,
       lead: Model,
+      prospector: Model,
     },
 
     seeds(server: any) {
       registries.forEach(registry => server.create('registry', registry));
       records.forEach(record => server.create('record', record));
       leads.forEach(lead => server.create('lead', lead));
+      prospectors.forEach(prospector =>
+        server.create('prospector', prospector)
+      );
     },
 
     routes() {
@@ -32,6 +37,15 @@ const mockedApi = () => {
       this.delete('/leads/:leadId', (schema: any, request) =>
         schema.leads.find(request.params.leadId).destroy()
       );
+
+      this.get('/prospectors', (schema: any) => schema.prospectors.all());
+
+      this.post('/prospectors', (schema: any, request: any) => {
+        const attrs = JSON.parse(request.requestBody);
+        delete attrs.id;
+        
+        return schema.prospectors.create(attrs);
+      });
 
       this.get('/score/:nationalIdNumber', (_, request: any) => ({
         nationalIdNumber: request.params.nationalIdNumber,
