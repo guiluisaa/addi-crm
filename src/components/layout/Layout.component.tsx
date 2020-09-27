@@ -6,7 +6,7 @@ import Header from '@/components/header/Header.component';
 
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.color.background};
-  height: 100vh;
+  min-height: 100vh;
 `;
 
 const Layout: FC = ({ children }) => (
