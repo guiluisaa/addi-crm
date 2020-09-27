@@ -15,6 +15,11 @@ const Table = styled.table`
     }
   }
 
+  th,
+  td {
+    vertical-align: middle;
+  }
+
   th {
     font-family: ${({ theme }) => theme.font.family};
     color: ${({ theme }) => theme.font.color.secondary};
@@ -30,7 +35,7 @@ const Table = styled.table`
     padding: 20px 10px;
 
     font-size: 16px;
-    line-height: 19px;
+    line-height: 30px;
   }
 `;
 
