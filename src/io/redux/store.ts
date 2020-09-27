@@ -12,13 +12,11 @@ const composeOptions = [applyMiddleware(...middleware)];
 const reduxDevTools =
   (window as any).__REDUX_DEVTOOLS_EXTENSION__ &&
   (window as any).__REDUX_DEVTOOLS_EXTENSION__();
-
 if (
   (window as any).__REDUX_DEVTOOLS_EXTENSION__ &&
   process.env.ENVIRONMENT !== 'production'
-) {
+)
   composeOptions.push(reduxDevTools);
-}
 
 const persistedReducer = persistReducer({ key: 'root', storage }, rootReducer);
 
@@ -28,6 +26,6 @@ const store = createStore(
   compose(...composeOptions)
 );
 
-const persistor = persistStore(store);
+const persistor = persistStore(store as any);
 
 export { store, persistor };
