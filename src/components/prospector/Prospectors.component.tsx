@@ -25,7 +25,10 @@ const Prospectors: FC<ProspectorsProps> = ({ prospectors }) => (
 
     <tbody>
       {prospectors.map(prospector => (
-        <Prospector prospector={prospector} />
+        <Prospector
+          key={`prospector-${prospector.nationalIdNumber}`}
+          prospector={prospector}
+        />
       ))}
     </tbody>
   </Table>
