@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ScoreCell /> should match snapchat 1`] = `
+<styled.div>
+  <styled.span
+    styleType="success"
+  >
+    60
+  </styled.span>
+</styled.div>
+`;
