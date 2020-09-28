@@ -26,7 +26,7 @@ const Leads: FC<LeadsProps> = ({ leads }) => (
 
     <tbody>
       {leads.map(lead => (
-        <Lead lead={lead} />
+        <Lead key={`lead-${lead.nationalIdNumber}`} lead={lead} />
       ))}
     </tbody>
   </Table>

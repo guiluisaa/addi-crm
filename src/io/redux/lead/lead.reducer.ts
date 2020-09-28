@@ -4,7 +4,9 @@ import {
   GET_LEADS,
   REMOVE_LEAD,
   SET_LEAD_ERROR,
-  EDIT_LEAD,
+  SET_LEAD_REGISTRY,
+  SET_LEAD_JUDICIAL_RECORDS,
+  SET_LEAD_SCORE,
 } from './lead.types';
 
 const initialState: LeadState = {
@@ -19,11 +21,40 @@ const leadReducer = (state = initialState, action: LeadTypes) => {
         ...state,
         leads: action.payload,
       };
-    case EDIT_LEAD:
+    case SET_LEAD_REGISTRY:
       return {
         ...state,
         leads: state.leads.map(lead => {
-          if (lead.id === action.payload.id) return action.payload;
+          if (lead.id === action.payload.id)
+            return {
+              ...lead,
+              existsInRegisty: action.payload.existsInRegisty,
+              matchWithRegisty: action.payload.matchWithRegisty,
+            };
+          return lead;
+        }),
+      };
+    case SET_LEAD_JUDICIAL_RECORDS:
+      return {
+        ...state,
+        leads: state.leads.map(lead => {
+          if (lead.id === action.payload.id)
+            return {
+              ...lead,
+              hasJudicialRecord: action.payload.hasJudicialRecord,
+            };
+          return lead;
+        }),
+      };
+    case SET_LEAD_SCORE:
+      return {
+        ...state,
+        leads: state.leads.map(lead => {
+          if (lead.id === action.payload.id)
+            return {
+              ...lead,
+              score: action.payload.score,
+            };
           return lead;
         }),
       };

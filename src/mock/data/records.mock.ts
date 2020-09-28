@@ -3,5 +3,5 @@ import { persons } from './persons.mock';
 
 export const records: RecordDto[] = persons.map(({ nationalIdNumber }) => ({
   nationalIdNumber,
-  hasJudicialRecord: Math.random() >= 0.4,
+  hasJudicialRecord: Math.random() >= 0.8,
 }));

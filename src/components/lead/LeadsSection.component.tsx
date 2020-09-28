@@ -2,10 +2,10 @@ import React, { FC, useEffect } from 'react';
 
 import Section from '@/components/section/Section.component';
 import Leads from './Leads.component';
-import useLead from '@/io/redux/lead/useLead';
+import useLeads from '@/io/redux/lead/useLeads';
 
 const LeadsSection: FC = () => {
-  const { leads, getLeads } = useLead();
+  const { leads, getLeads } = useLeads();
 
   useEffect(() => {
     getLeads();

@@ -26,25 +26,43 @@ const mockedApi = () => {
     },
 
     routes() {
-      this.timing = 1000;
+      this.timing = 100;
 
-      this.get('/registries', (schema: any) => schema.registries.all());
+      this.get(
+        '/registries/:nationalIdNumber',
+        (schema: any, request: any) => {
+          const registries = schema.registries.where({
+            nationalIdNumber: request.params.nationalIdNumber,
+          });
 
-      this.get('/registries/:nationalIdNumber', (schema: any, request: any) => {
-        const registries = schema.registries.where({
-          nationalIdNumber: request.params.nationalIdNumber,
-        });
+          if (registries.length) return registries;
 
-        if (registries.length) return registries;
+          return new Response(
+            404,
+            {},
+            { status: 404, error: 'Registry not found' }
+          );
+        },
+        { timing: 1000 }
+      );
 
-        return new Response(
-          404,
-          {},
-          { status: 404, error: 'Registry not found' }
-        );
-      });
+      this.get(
+        '/records/:nationalIdNumber',
+        (schema: any, request: any) => {
+          const records = schema.records.where({
+            nationalIdNumber: request.params.nationalIdNumber,
+          });
 
-      this.get('/records', (schema: any) => schema.records.all());
+          if (records.length) return records;
+
+          return new Response(
+            404,
+            {},
+            { status: 404, error: 'Registry not found' }
+          );
+        },
+        { timing: 2500 }
+      );
 
       this.get('/leads', (schema: any) => schema.leads.all());
 
@@ -61,10 +79,26 @@ const mockedApi = () => {
         return schema.prospectors.create(attrs);
       });
 
-      this.get('/score/:nationalIdNumber', (_, request: any) => ({
-        nationalIdNumber: request.params.nationalIdNumber,
-        score: Math.floor(Math.random() * 101),
-      }));
+      this.post('/score/:nationalIdNumber', (_, request: any) => {
+        let score = Math.floor(Math.random() * 101);
+
+        const {
+          existsInRegisty,
+          matchWithRegisty,
+          hasJudicialRecord,
+        } = JSON.parse(request.requestBody);
+
+        if (existsInRegisty) score = score + 5;
+        if (matchWithRegisty) score = score + 5;
+        if (!hasJudicialRecord) score = score + 5;
+
+        if (score >= 100) score = 100;
+
+        return {
+          nationalIdNumber: request.params.nationalIdNumber,
+          score,
+        };
+      });
     },
   });
 

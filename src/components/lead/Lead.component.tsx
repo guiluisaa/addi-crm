@@ -7,13 +7,15 @@ import JudicialRecordsCell from '@/components/judicial-records/JudicialRecordsCe
 import ScoreCell from '../score-cell/ScoreCell.component';
 import { Paragraph } from '@/components/typograph/typograph.component';
 import useLead from '@/io/redux/lead/useLead';
+import Icon from '@/components/icons/Icon.component';
+import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
 
 type LeadProps = {
   lead: LeadModel;
 };
 
 const Lead: FC<LeadProps> = ({ lead }) => {
-  const { isLoading, validateLead } = useLead();
+  const { isLoading, isRefused, wasFeched, validateLead } = useLead(lead.id);
 
   const onClick = () => validateLead(lead);
 
@@ -38,10 +40,12 @@ const Lead: FC<LeadProps> = ({ lead }) => {
         />
       </td>
       <td style={{ textAlign: 'center' }}>
-        <ScoreCell isLoading={isLoading} score={lead.score} />
+        <ScoreCell isLoading={wasFeched && isLoading} score={lead.score} />
       </td>
       <td style={{ textAlign: 'center' }}>
-        {isLoading ? (
+        {isRefused && !isLoading ? (
+          <Icon icon={faExclamationCircle} styleType="danger" />
+        ) : isLoading ? (
           <Paragraph color="secondary">Processing...</Paragraph>
         ) : (
           <Button onClick={onClick}>Validate</Button>
