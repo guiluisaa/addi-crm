@@ -4,6 +4,7 @@ import {
   GET_LEADS,
   REMOVE_LEAD,
   SET_LEAD_ERROR,
+  EDIT_LEAD,
 } from './lead.types';
 
 const initialState: LeadState = {
@@ -17,6 +18,14 @@ const leadReducer = (state = initialState, action: LeadTypes) => {
       return {
         ...state,
         leads: action.payload,
+      };
+    case EDIT_LEAD:
+      return {
+        ...state,
+        leads: state.leads.map(lead => {
+          if (lead.id === action.payload.id) return action.payload;
+          return lead;
+        }),
       };
     case REMOVE_LEAD:
       return {

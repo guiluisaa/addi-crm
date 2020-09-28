@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC } from 'react';
 
 import { LeadModel } from '@/models/Lead.model';
 import Button from '@/components/button/Button.component';
@@ -6,13 +6,16 @@ import RegistryCell from '@/components/registry-cell/RegistryCell.component';
 import JudicialRecordsCell from '@/components/judicial-records/JudicialRecordsCell.component';
 import ScoreCell from '../score-cell/ScoreCell.component';
 import { Paragraph } from '@/components/typograph/typograph.component';
+import useLead from '@/io/redux/lead/useLead';
 
 type LeadProps = {
   lead: LeadModel;
 };
 
 const Lead: FC<LeadProps> = ({ lead }) => {
-  const [isLoading] = useState(false);
+  const { isLoading, validateLead } = useLead();
+
+  const onClick = () => validateLead(lead);
 
   return (
     <tr>
@@ -41,7 +44,7 @@ const Lead: FC<LeadProps> = ({ lead }) => {
         {isLoading ? (
           <Paragraph color="secondary">Processing...</Paragraph>
         ) : (
-          <Button>Validate</Button>
+          <Button onClick={onClick}>Validate</Button>
         )}
       </td>
     </tr>

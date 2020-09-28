@@ -13,6 +13,7 @@ const Button = styled.button<ButtonProps>`
   padding: 0 16px;
   border-radius: ${({ theme }) => theme.borderRadius.default};
   cursor: pointer;
+  outline: 0;
 
   ${({ uppercase }) =>
     uppercase &&

@@ -6,8 +6,9 @@ export type LeadState = {
 };
 
 export const GET_LEADS = 'GET_LEADS';
-export const SET_LEAD_ERROR = 'SET_LEAD_ERROR';
 export const REMOVE_LEAD = 'REMOVE_LEAD';
+export const EDIT_LEAD = 'EDIT_LEAD';
+export const SET_LEAD_ERROR = 'SET_LEAD_ERROR';
 
 type getLeads = {
   type: typeof GET_LEADS;
@@ -19,9 +20,14 @@ type removeLead = {
   payload: LeadModel;
 };
 
+type editLead = {
+  type: typeof EDIT_LEAD;
+  payload: LeadModel;
+};
+
 type setError = {
   type: typeof SET_LEAD_ERROR;
   payload: string;
 };
 
-export type LeadTypes = getLeads | removeLead | setError;
+export type LeadTypes = getLeads | removeLead | editLead | setError;

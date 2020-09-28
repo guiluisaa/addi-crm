@@ -1,4 +1,4 @@
-import { Model, Server } from 'miragejs';
+import { Model, Server, Response } from 'miragejs';
 
 import { registries } from './data/registries.mock';
 import { records } from './data/records.mock';
@@ -30,6 +30,20 @@ const mockedApi = () => {
 
       this.get('/registries', (schema: any) => schema.registries.all());
 
+      this.get('/registries/:nationalIdNumber', (schema: any, request: any) => {
+        const registries = schema.registries.where({
+          nationalIdNumber: request.params.nationalIdNumber,
+        });
+
+        if (registries.length) return registries;
+
+        return new Response(
+          404,
+          {},
+          { status: 404, error: 'Registry not found' }
+        );
+      });
+
       this.get('/records', (schema: any) => schema.records.all());
 
       this.get('/leads', (schema: any) => schema.leads.all());
@@ -43,7 +57,7 @@ const mockedApi = () => {
       this.post('/prospectors', (schema: any, request: any) => {
         const attrs = JSON.parse(request.requestBody);
         delete attrs.id;
-        
+
         return schema.prospectors.create(attrs);
       });
 
