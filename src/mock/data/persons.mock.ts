@@ -27,6 +27,6 @@ export const persons: PersonDto[] = [
     lastName: 'Smith',
     nationalIdNumber: '19399063003',
     birthdate: '1972-01-15',
-    email: 'johnwick@gmail.com',
+    email: 'danielsmith@gmail.com',
   },
 ];
