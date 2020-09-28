@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LeadFeedbackCell /> should match snapchat 1`] = `
+<Fragment>
+  <Styled(styled.p)>
+    - Has Judicial Record
+  </Styled(styled.p)>
+  <Styled(styled.p)>
+    - Low score
+  </Styled(styled.p)>
+</Fragment>
+`;

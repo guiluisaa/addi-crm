@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Lead /> should match snapchat 1`] = `
+<tr>
+  <td
+    style={
+      Object {
+        "textAlign": "right",
+      }
+    }
+  >
+    1
+  </td>
+  <td>
+    Ashlyn Reeve
+  </td>
+  <td>
+    70143939017
+  </td>
+  <td>
+    1990-07-03
+  </td>
+  <td>
+    ashlynreeve@gmail.com
+  </td>
+  <td
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    <RegistreyCell
+      existsInRegisty={null}
+      isLoading={false}
+      matchWithRegisty={null}
+    />
+  </td>
+  <td
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    <RegistryCell
+      hasJudicialRecord={null}
+      isLoading={false}
+    />
+  </td>
+  <td
+    style={
+      Object {
+        "textAlign": "center",
+      }
+    }
+  >
+    <ScoreCell
+      isLoading={false}
+      score={0}
+    />
+  </td>
+  <td>
+    <styled.button
+      onClick={[Function]}
+    >
+      Validate
+    </styled.button>
+  </td>
+</tr>
+`;
