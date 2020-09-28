@@ -7,8 +7,9 @@ import JudicialRecordsCell from '@/components/judicial-records/JudicialRecordsCe
 import ScoreCell from '../score-cell/ScoreCell.component';
 import { Paragraph } from '@/components/typograph/typograph.component';
 import useLead from '@/io/redux/lead/useLead';
-import Icon from '@/components/icons/Icon.component';
-import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
+// import Icon from '@/components/icons/Icon.component';
+// import { faExclamationCircle } from '@fortawesome/free-solid-svg-icons';
+import LeadFeedbackCell from './LeadFeedbackCell.component';
 
 type LeadProps = {
   lead: LeadModel;
@@ -44,7 +45,13 @@ const Lead: FC<LeadProps> = ({ lead }) => {
       </td>
       <td style={{ textAlign: 'center' }}>
         {isRefused && !isLoading ? (
-          <Icon icon={faExclamationCircle} styleType="danger" />
+          // <Icon icon={faExclamationCircle} styleType="danger" />
+          <LeadFeedbackCell
+            existsInRegisty={!!lead.existsInRegisty}
+            matchWithRegisty={!!lead.matchWithRegisty}
+            hasJudicialRecord={!!lead.hasJudicialRecord}
+            score={lead.score}
+          />
         ) : isLoading ? (
           <Paragraph color="secondary">Processing...</Paragraph>
         ) : (
