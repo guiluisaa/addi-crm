@@ -6,7 +6,7 @@ const theme: DefaultTheme = {
     black: '#424242',
 
     background: '#ebebeb',
-    border: '#BFBFBF',
+    border: 'rgba(0,0,0,0.1)',
 
     primary: '#6272a4',
     secondary: '#44475a',

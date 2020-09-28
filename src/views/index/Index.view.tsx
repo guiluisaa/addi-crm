@@ -1,5 +1,11 @@
 import React, { FC } from 'react';
 
-const IndexView: FC = () => <>Index View</>;
+import LeadsSection from '@/components/lead/LeadsSection.component';
+
+const IndexView: FC = () => (
+  <>
+    <LeadsSection />
+  </>
+);
 
 export default IndexView;
