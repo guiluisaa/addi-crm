@@ -28,7 +28,7 @@ const invalidLeads: LeadDto[] = [
     lastName: 'Legge',
     nationalIdNumber: '89896287090',
     birthdate: '1977-12-14',
-    email: 'ashlynreeve@gmail.com',
+    email: 'valentinolegge@gmail.com',
 
     existsInRegisty: null,
     matchWithRegisty: null,
