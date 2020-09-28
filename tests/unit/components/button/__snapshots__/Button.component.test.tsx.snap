@@ -9,6 +9,7 @@ exports[`<Button /> should match snapchat 1`] = `
   padding: 0 16px;
   border-radius: 3px;
   cursor: pointer;
+  outline: 0;
   color: #FFF;
   border: solid 2px #2AD178;
   background-color: #2AD178;
