@@ -43,7 +43,7 @@ const Lead: FC<LeadProps> = ({ lead }) => {
       <td style={{ textAlign: 'center' }}>
         <ScoreCell isLoading={wasFeched && isLoading} score={lead.score} />
       </td>
-      <td style={{ textAlign: 'center' }}>
+      <td>
         {isRefused && !isLoading ? (
           // <Icon icon={faExclamationCircle} styleType="danger" />
           <LeadFeedbackCell

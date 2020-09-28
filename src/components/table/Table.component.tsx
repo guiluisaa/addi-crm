@@ -32,8 +32,8 @@ const Table = styled.table`
     color: ${({ theme }) => theme.font.color.primary};
     padding: 10px;
 
-    font-size: 16px;
-    line-height: 30px;
+    font-size: 14px;
+    line-height: 24px;
   }
 `;
 
