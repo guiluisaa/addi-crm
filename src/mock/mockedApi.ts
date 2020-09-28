@@ -79,26 +79,30 @@ const mockedApi = () => {
         return schema.prospectors.create(attrs);
       });
 
-      this.post('/score/:nationalIdNumber', (_, request: any) => {
-        let score = Math.floor(Math.random() * 101);
+      this.post(
+        '/score/:nationalIdNumber',
+        (_, request: any) => {
+          let score = Math.floor(Math.random() * 101);
 
-        const {
-          existsInRegisty,
-          matchWithRegisty,
-          hasJudicialRecord,
-        } = JSON.parse(request.requestBody);
+          const {
+            existsInRegisty,
+            matchWithRegisty,
+            hasJudicialRecord,
+          } = JSON.parse(request.requestBody);
 
-        if (existsInRegisty) score = score + 5;
-        if (matchWithRegisty) score = score + 5;
-        if (!hasJudicialRecord) score = score + 5;
+          if (existsInRegisty) score = score + 5;
+          if (matchWithRegisty) score = score + 5;
+          if (!hasJudicialRecord) score = score + 5;
 
-        if (score >= 100) score = 100;
+          if (score >= 100) score = 100;
 
-        return {
-          nationalIdNumber: request.params.nationalIdNumber,
-          score,
-        };
-      });
+          return {
+            nationalIdNumber: request.params.nationalIdNumber,
+            score,
+          };
+        },
+        { timing: 3000 }
+      );
     },
   });
 
