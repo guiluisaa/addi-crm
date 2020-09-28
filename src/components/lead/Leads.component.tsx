@@ -20,7 +20,7 @@ const Leads: FC<LeadsProps> = ({ leads }) => (
         <th style={{ textAlign: 'center' }}>National Registry</th>
         <th style={{ textAlign: 'center' }}>Judicial Records</th>
         <th style={{ textAlign: 'center' }}>Credit Score</th>
-        <th></th>
+        <th>Validation</th>
       </tr>
     </thead>
 
