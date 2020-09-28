@@ -18,7 +18,7 @@ const RegistryCell: FC<RegistryCellProps> = ({
 
   const styleType = useMemo(() => {
     if (wasFetch) {
-      if (hasJudicialRecord) return 'success';
+      if (!hasJudicialRecord) return 'success';
       else return 'danger';
     }
 
