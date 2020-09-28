@@ -2,6 +2,8 @@
 
 The ADDI CRM front-end to convert leads into prospects
 
+> Visit the live app at [https://addi-crm.vercel.app/](https://addi-crm.vercel.app/)
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer:
@@ -39,4 +41,7 @@ yarn build:production
 ```bash
 # unit tests
 yarn test:unit
+
+# unit tests with coverage
+yarn test:unit:coverage
 ```
