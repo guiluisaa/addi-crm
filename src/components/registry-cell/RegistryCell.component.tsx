@@ -3,13 +3,13 @@ import { faIdCard } from '@fortawesome/free-solid-svg-icons';
 
 import Icon, { IconWrapper } from '@/components/icons/Icon.component';
 
-type JudicialRecorsCellProps = {
+type RegistreyCellProps = {
   isLoading?: boolean;
   existsInRegisty: boolean | null;
   matchWithRegisty: boolean | null;
 };
 
-const JudicialRecorsCell: FC<JudicialRecorsCellProps> = ({
+const RegistreyCell: FC<RegistreyCellProps> = ({
   isLoading,
   existsInRegisty,
   matchWithRegisty,
@@ -36,4 +36,4 @@ const JudicialRecorsCell: FC<JudicialRecorsCellProps> = ({
   );
 };
 
-export default JudicialRecorsCell;
+export default RegistreyCell;
