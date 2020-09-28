@@ -9,7 +9,7 @@ const Button = styled.button<ButtonProps>`
   display: inline-block;
   font-size: 13px;
   font-weight: ${({ theme }) => theme.font.weight.semiBold};
-  line-height: 40px;
+  line-height: 32px;
   padding: 0 16px;
   border-radius: ${({ theme }) => theme.borderRadius.default};
   cursor: pointer;

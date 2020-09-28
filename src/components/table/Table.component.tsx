@@ -9,10 +9,8 @@ const Table = styled.table`
 
   ${BoxShadow};
 
-  tr {
-    &:not(:first-child) {
-      border-top: solid 1px ${({ theme }) => theme.color.border};
-    }
+  tbody tr {
+    border-top: solid 1px ${({ theme }) => theme.color.border};
   }
 
   th,
@@ -32,7 +30,7 @@ const Table = styled.table`
   td {
     font-family: ${({ theme }) => theme.font.family};
     color: ${({ theme }) => theme.font.color.primary};
-    padding: 20px 10px;
+    padding: 10px;
 
     font-size: 16px;
     line-height: 30px;
