@@ -30,8 +30,8 @@ exports[`<Table /> should match snapchat 1`] = `
   font-family: primary:'Open Sans',sans-serif;
   color: #424242;
   padding: 10px;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: 14px;
+  line-height: 24px;
 }
 
 <table

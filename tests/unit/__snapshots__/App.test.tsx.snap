@@ -38,7 +38,7 @@ exports[`<App /> should match snapchat 1`] = `
             "lg": 992,
             "md": 768,
             "sm": 576,
-            "xl": 1200,
+            "xl": 1300,
           },
           "color": Object {
             "background": "#ebebeb",
