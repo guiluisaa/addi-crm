@@ -2,6 +2,7 @@
 
 exports[`<IndexView /> should match snapchat 1`] = `
 <Fragment>
-  Index View
+  <LeadsSection />
+  <ProspectorsSection />
 </Fragment>
 `;

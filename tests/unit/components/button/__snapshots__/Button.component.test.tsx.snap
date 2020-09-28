@@ -5,7 +5,7 @@ exports[`<Button /> should match snapchat 1`] = `
   display: inline-block;
   font-size: 13px;
   font-weight: 600;
-  line-height: 40px;
+  line-height: 32px;
   padding: 0 16px;
   border-radius: 3px;
   cursor: pointer;
