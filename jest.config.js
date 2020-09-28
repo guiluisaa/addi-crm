@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'addi-lead',
+  displayName: 'addi-crm',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',

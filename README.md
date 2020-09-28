@@ -1,4 +1,4 @@
-# addi-lead
+# addi-crm
 
 The ADDI CRM front-end to convert leads into prospects
 
@@ -14,7 +14,7 @@ You will need the following things properly installed on your computer:
 ## Installation
 
 - `git clone <repository-url>` this repository
-- `cd addi-lead`
+- `cd addi-crm`
 - `yarn install --ignore-engines`
 
 ## Running / Development
