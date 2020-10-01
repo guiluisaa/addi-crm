@@ -1,0 +1,165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Leads /> should match snapchat 1`] = `
+<styled.table>
+  <thead>
+    <tr>
+      <th
+        style={
+          Object {
+            "textAlign": "right",
+          }
+        }
+      >
+        Code
+      </th>
+      <th>
+        Full Name
+      </th>
+      <th>
+        ID Number
+      </th>
+      <th>
+        Birthdate
+      </th>
+      <th>
+        E-mail
+      </th>
+      <th
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        National Registry
+      </th>
+      <th
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        Judicial Records
+      </th>
+      <th
+        style={
+          Object {
+            "textAlign": "center",
+          }
+        }
+      >
+        Credit Score
+      </th>
+      <th>
+        Validation
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <Lead
+      key="lead-43240154064"
+      lead={
+        Object {
+          "birthdate": "1990-08-29",
+          "email": "johndoe@gmail.com",
+          "existsInRegisty": null,
+          "firstName": "John",
+          "hasJudicialRecord": null,
+          "id": "0",
+          "lastName": "Doe",
+          "matchWithRegisty": null,
+          "nationalIdNumber": "43240154064",
+          "score": 0,
+        }
+      }
+    />
+    <Lead
+      key="lead-74186516006"
+      lead={
+        Object {
+          "birthdate": "1988-05-21",
+          "email": "mariaxavier@gmail.com",
+          "existsInRegisty": null,
+          "firstName": "Maria",
+          "hasJudicialRecord": null,
+          "id": "1",
+          "lastName": "Xavier",
+          "matchWithRegisty": null,
+          "nationalIdNumber": "74186516006",
+          "score": 0,
+        }
+      }
+    />
+    <Lead
+      key="lead-83256381090"
+      lead={
+        Object {
+          "birthdate": "1972-01-15",
+          "email": "johnwick@gmail.com",
+          "existsInRegisty": null,
+          "firstName": "John",
+          "hasJudicialRecord": null,
+          "id": "2",
+          "lastName": "Wick",
+          "matchWithRegisty": null,
+          "nationalIdNumber": "83256381090",
+          "score": 0,
+        }
+      }
+    />
+    <Lead
+      key="lead-19399063003"
+      lead={
+        Object {
+          "birthdate": "1972-01-15",
+          "email": "danielsmith@gmail.com",
+          "existsInRegisty": null,
+          "firstName": "Daniela",
+          "hasJudicialRecord": null,
+          "id": "3",
+          "lastName": "Smith",
+          "matchWithRegisty": null,
+          "nationalIdNumber": "19399063003",
+          "score": 0,
+        }
+      }
+    />
+    <Lead
+      key="lead-70143939017"
+      lead={
+        Object {
+          "birthdate": "1990-07-03",
+          "email": "ashlynreeve@gmail.com",
+          "existsInRegisty": null,
+          "firstName": "Ashlyn",
+          "hasJudicialRecord": null,
+          "id": "4",
+          "lastName": "Reeve",
+          "matchWithRegisty": null,
+          "nationalIdNumber": "70143939017",
+          "score": 0,
+        }
+      }
+    />
+    <Lead
+      key="lead-89896287090"
+      lead={
+        Object {
+          "birthdate": "1977-12-14",
+          "email": "valentinolegge@gmail.com",
+          "existsInRegisty": null,
+          "firstName": "Valentino",
+          "hasJudicialRecord": null,
+          "id": "5",
+          "lastName": "Legge",
+          "matchWithRegisty": null,
+          "nationalIdNumber": "89896287090",
+          "score": 0,
+        }
+      }
+    />
+  </tbody>
+</styled.table>
+`;

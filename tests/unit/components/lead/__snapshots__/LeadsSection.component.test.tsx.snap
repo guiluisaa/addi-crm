@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Lead /> should match snapchat 1`] = `
+exports[`<LeadsSection /> should match snapchat 1`] = `
 <Section
   title="Leads"
 >
